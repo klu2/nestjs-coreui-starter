@@ -10,7 +10,7 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:prettier/recommended',
         'plugin:@cloudflight/node/recommended',
-        'plugin:import/typescript'
+        'plugin:import/typescript',
     ],
     root: true,
     env: {
@@ -29,10 +29,12 @@ module.exports = {
         '@typescript-eslint/explicit-function-return-type': 'off', // does not make sense with controllers
         '@typescript-eslint/no-extraneous-class': 'off',
     },
-    overrides: [{
-        files: ['**/*.*spec.ts'],
-        rules: {
-            "node/no-unpublished-import": 'off'
+    overrides: [
+        {
+            files: ['**/*.*spec.ts'],
+            rules: {
+                'node/no-unpublished-import': 'off',
+            },
         },
-    }],
+    ],
 };
