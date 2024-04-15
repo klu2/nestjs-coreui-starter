@@ -24,10 +24,6 @@ module.exports = {
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
 
-        // TODO enable these rules again after fixing tsconfig.json
-        '@typescript-eslint/strict-boolean-expressions': 'off',
-        '@typescript-eslint/prefer-nullish-coalescing': 'off',
-
         'no-magic-numbers': 'off',
         '@typescript-eslint/explicit-member-accessibility': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off', // does not make sense with controllers
