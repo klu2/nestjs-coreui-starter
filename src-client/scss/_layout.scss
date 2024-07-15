@@ -1,0 +1,17 @@
+.wrapper {
+    width: 100%;
+    @include ltr-rtl('padding-left', var(--cui-sidebar-occupy-start, 0));
+    will-change: auto;
+    @include transition(padding 0.15s);
+}
+
+.sidebar-toggler {
+    @include ltr-rtl('margin-left', auto);
+}
+
+.sidebar-narrow,
+.sidebar-narrow-unfoldable:not(:hover) {
+    .sidebar-toggler {
+        @include ltr-rtl('margin-right', auto);
+    }
+}

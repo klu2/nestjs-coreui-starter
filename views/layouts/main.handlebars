@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+
+{{> head}}
+
+<body>
+    <div class="sidebar sidebar-dark sidebar-fixed border-end" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-brand">
+                <img class="sidebar-brand-full" height="35" alt="Logo" src="/images/logo.png">
+                </img>
+
+                <img class="sidebar-brand-narrow" height="35" alt="Logo" src="/images/logo.png">
+                </img>
+            </div>
+            <button class="btn-close d-lg-none" type="button" data-coreui-dismiss="offcanvas" data-coreui-theme="dark"
+                aria-label="Schließen"
+                onclick="coreui.Sidebar.getInstance(document.querySelector(&quot;#sidebar&quot;)).toggle()"></button>
+        </div>
+        <ul class="sidebar-nav" data-coreui="navigation" data-simplebar>
+            <li class="nav-item"><a class="nav-link" href="/">
+                    {{> navicon code="cil-speedometer"}}
+                    Dashboard
+                </a>
+            </li>
+        </ul>
+        <div class="sidebar-footer border-top d-none d-md-flex">
+            <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
+        </div>
+    </div>
+    <div class="wrapper d-flex flex-column min-vh-100">
+        <header class="header header-sticky p-0 mb-4">
+            <div class="container-fluid border-bottom px-4">
+                <button class="header-toggler" type="button"
+                    onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()"
+                    style="margin-inline-start: -14px;">
+                    {{> icon code="cil-menu" size="lg"}}
+                </button>
+                <a class="header-brand d-md-none" href="/">
+                    <img class="sidebar-brand-full" height="35" alt="Logo" src="/images/logo.png">
+                    </img>
+                </a>
+                <ul class="header-nav ms-auto">
+                    <li class="nav-item py-1">
+                        <div class="vr h-100 mx-2 text-body text-opacity-75"></div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="btn btn-link nav-link py-2 px-2 d-flex align-items-center" type="button"
+                            aria-expanded="false" data-coreui-toggle="dropdown">
+                            {{> icon code="cil-contrast" size="lg theme-icon-active"}}
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" style="--cui-dropdown-min-width: 8rem;">
+                            <li>
+                                <button class="dropdown-item d-flex align-items-center" type="button"
+                                    data-coreui-theme-value="light">
+                                    {{> icon code="cil-sun" size="lg me-3"}}
+                                    Light
+                                </button>
+                            </li>
+                            <li>
+                                <button class="dropdown-item d-flex align-items-center" type="button"
+                                    data-coreui-theme-value="dark">
+                                    {{> icon code="cil-moon" size="lg me-3"}}
+                                    Dark
+                                </button>
+                            </li>
+                            <li>
+                                <button class="dropdown-item d-flex align-items-center active" type="button"
+                                    data-coreui-theme-value="auto">
+                                    {{> icon code="cil-contrast" size="lg me-3"}}
+                                    Auto
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item py-1">
+                        <div class="vr h-100 mx-2 text-body text-opacity-75"></div>
+                    </li>
+                </ul>
+
+                <ul class="header-nav">
+                    <li class="nav-item dropdown"><a class="nav-link py-0" data-coreui-toggle="dropdown" href="#"
+                            role="button" aria-haspopup="true" aria-expanded="false">
+                            <div class="avatar avatar-md">
+                                {{> icon code="cil-user" size="lg"}}
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end pt-0">
+                            <form method="post" action="/login/logout">
+                                <button class="dropdown-item" type="submit">
+                                    {{> icon code="cil-account-logout" size=" me-2"}}
+                                    Logout
+                                </button>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="body flex-grow-1 px-3">
+            {{{body}}}
+        </div>
+        <footer class="footer">
+            <div class="ms-auto">
+                NestJS CoreUI Starter &copy; 2024
+            </div>
+        </footer>
+    </div>
+    <script src="/static/coreui/js/coreui.bundle.min.js"></script>
+    <script src="/static/simplebar/simplebar.min.js"></script>
+    <script src="/static/coreui/utils/index.js"></script>
+    <script src="/static/js/tooltip.min.js"></script>
+</body>
+
+</html>

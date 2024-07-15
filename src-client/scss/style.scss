@@ -1,0 +1,20 @@
+$enable-deprecation-messages: false !default;
+
+//$primary: #3aaa35 !default;
+
+$dark: #282828 !default;
+$sidebar-bg: $dark;
+
+$body-bg-dark: lighten($dark, 4);
+$body-tertiary-bg-dark: $dark;
+$border-color-dark: #585858;
+
+$enable-ltr: true;
+$enable-rtl: true;
+
+// Import styles
+@import '@coreui/coreui/scss/coreui';
+
+@import 'layout';
+
+@import 'custom';

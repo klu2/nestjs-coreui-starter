@@ -1,0 +1,18 @@
+<div class="bg-light min-vh-100 d-flex flex-row align-items-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card-group d-block d-md-flex row">
+                    <div class="card col-md-7 p-4 mb-0">
+                        <div class="card-body">
+                            <h1 class="float-start display-3 me-4">{{error.status}}</h1>
+                            <h4 class="pt-3">Das hätte nicht passieren dürfen!</h4>
+                            <pre>{{stack}}</pre>
+                            <button class="btn btn-primary" onclick="window.history.back()">Zurück</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
